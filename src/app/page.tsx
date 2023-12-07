@@ -6,6 +6,8 @@ const Generate = dynamic(
 	{ ssr: false },
 );
 
+export const runtime = "edge";
+
 export default function Home() {
 	return <Generate />;
 }
