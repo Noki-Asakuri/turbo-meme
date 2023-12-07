@@ -41,7 +41,7 @@ const generateData = z.object({
 });
 
 const generateInputs = endpointInputs.and(generateData).superRefine((input, ctx) => {
-	if (!input.isOpenAI) {
+	if (!input.url.startsWith("https://api.openai.com")) {
 		if (input.response_format === "url") {
 			ctx.addIssue({
 				code: "invalid_literal",
@@ -126,8 +126,8 @@ const generateInputs = endpointInputs.and(generateData).superRefine((input, ctx)
 export const images = createTRPCRouter({
 	create: publicProcedure.input(generateInputs).mutation(async ({ input }) => {
 		console.log(input);
-		const size = input.size.split("x");
 
+		const size = input.size.split("x");
 		const body: Record<string, unknown> = {
 			model: input.model,
 			prompt: input.prompt,
