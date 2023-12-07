@@ -10,6 +10,9 @@ export default {
 			fontFamily: {
 				sans: ["var(--font-sans)", ...fontFamily.sans],
 			},
+			aspectRatio: {
+				"r-video": "9 / 16",
+			},
 			container: {
 				center: true,
 				padding: { DEFAULT: "0.5rem", sm: "1rem" },
@@ -17,5 +20,5 @@ export default {
 		},
 	},
 	darkMode: "class",
-	plugins: [nextui()],
+	plugins: [require("@tailwindcss/container-queries"), nextui()],
 } satisfies Config;

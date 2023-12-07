@@ -18,16 +18,20 @@
 		"@trpc/react-query": "^10.43.6",
 		"@trpc/server": "^10.43.6",
 		"framer-motion": "^10.16.12",
+		"lucide-react": "^0.294.0",
 		"next": "^14.0.3",
 		"next-themes": "^0.2.1",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
+		"react-hot-toast": "^2.4.1",
 		"server-only": "^0.0.1",
 		"superjson": "^2.2.1",
-		"zod": "^3.22.4"
+		"zod": "^3.22.4",
+		"zustand": "^4.4.7"
 	},
 	"devDependencies": {
 		"@next/eslint-plugin-next": "^14.0.3",
+		"@tailwindcss/container-queries": "^0.1.1",
 		"@trivago/prettier-plugin-sort-imports": "^4.3.0",
 		"@types/eslint": "^8.44.7",
 		"@types/node": "^18.17.0",
